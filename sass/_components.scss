@@ -62,11 +62,6 @@
 }
 
 
-
-
-
-
-
 ////////////////////////////////////////
 /// USER NAVIGATION
 .user-nav {
@@ -122,3 +117,50 @@
     }
 
 }
+
+////////////////////////////////////////
+/// SIDEBAR
+
+.sidebar {
+    
+}
+
+.side-nav {
+    list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    padding: 2rem 0;
+
+    &__item {
+        padding: 1.5rem 3rem;
+    }
+    
+    &__link {
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        font-style: inherit;
+        font-size: 1.6rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        display:flex;
+        align-items: center;
+
+        
+    }
+    
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-light-1);
+        margin-right: 2rem;
+        
+    }
+
+    
+
+}
+
