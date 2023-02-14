@@ -11,10 +11,11 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: var(--color-grey-light-2);
+    border-bottom: 2px solid var(--color-grey-light-2);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .content {
@@ -31,13 +32,11 @@
     text-align: center;
 }
 
-.legal {
-    color: var(--color-grey-light-4);
-    font-size: 1.2rem;
-    padding: 3rem 3rem;
-}
+
 
 .hotel-view {
     background-color: #fff;
     flex: 1;
+
+    height: 80rem;
 }

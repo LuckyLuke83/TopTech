@@ -47,7 +47,7 @@
             <div class="content">
                 <nav class="sidebar">
                     <ul class="side-nav">
-                        <li class="side-nav__item">
+                        <li class="side-nav__item side-nav__item--active">
                             <a href="#" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-home"></use>
@@ -101,7 +101,40 @@
                     </div>
                 </nav>
                 <main class="hotel-view">
-                    Hotel-view
+                    <div class="gallery">
+                        <figure class="gallery__item">
+                            <img src="img/pic_1.png" alt="Photo 1" class="gallery__photo">
+                        </figure>
+                        <figure class="gallery__item">
+                            <img src="img/pic_2.png" alt="Photo 2" class="gallery__photo">
+                        </figure>
+                        <figure class="gallery__item">
+                            <img src="img/pic_3.png" alt="Photo 3" class="gallery__photo">
+                        </figure>
+                    </div>
+
+                    <div class="overview">
+                        <div class="overview__partner">
+                            <img src="img/siemens.png" alt="" class="overview__partner-photo">
+                            
+                                <svg class="overview__icon-thumbs">
+                                    <use xlink:href="img/sprite.svg#icon-thumbs-up"></use>
+                                </svg>
+                        </div>
+                                                
+                        <div class="overview__location">
+                            <svg class="overview__icon-location">
+                                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                            </svg>
+                            <button class="btn-inline">Top-Tech Location</button>
+                            <div class="overview__rating">
+                                <div class="overview__rating-average">8.6</div>
+                                <div class="overview__rating-count">429</div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
                 </main>
             </div>
         </div>
