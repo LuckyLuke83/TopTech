@@ -14,9 +14,9 @@
     <body>
         <div class="container">
             <header class="header">
-                <img src="img/logo.png" alt="Trillo logo" class="logo">
+                <img src="img/logo.png" alt="Top-Tech logo" class="logo">
                 <form action="#" class="search">
-                    <input type="text" class="search__input" placeholder="Search hotels">
+                    <input type="text" class="search__input" placeholder="Przeszukaj stronę">
                     <button class="search__button">
                         <svg class="search__icon">
                             <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
@@ -25,21 +25,16 @@
                 </form>
 
                 <nav class="user-nav">
+                    
                     <div class="user-nav__icon-box">
                         <svg class="user-nav__icon">
-                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                            <use xlink:href="img/sprite.svg#icon-install"></use>
                         </svg>
-                        <span class="user-nav__notification">7</span>
                     </div>
                     <div class="user-nav__icon-box">
                         <svg class="user-nav__icon">
-                            <use xlink:href="img/sprite.svg#icon-chat"></use>
-                            <span class="user-nav__notification">13</span>
+                            <use xlink:href="img/sprite.svg#icon-mail"></use>
                         </svg>
-                    </div>
-                    <div class="user-nav__user">
-                        <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
-                        <span class="user-nav__user-name">Jonas</span>
                     </div>
                 </nav>
 
@@ -61,14 +56,6 @@
                                     <use xlink:href="img/sprite.svg#icon-briefcase"></use>
                                 </svg>
                                 <span>Oferta</span> 
-                            </a>
-                        </li>
-                        <li class="side-nav__item">
-                            <a href="#" class="side-nav__link">
-                                <svg class="side-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-install"></use>
-                                </svg>
-                                <span>Pobierz</span> 
                             </a>
                         </li>
                         <li class="side-nav__item">
@@ -114,14 +101,6 @@
                     </div>
 
                     <div class="overview">
-                        <div class="overview__partner">
-                            <img src="img/siemens.png" alt="" class="overview__partner-photo">
-                            
-                                <svg class="overview__icon-thumbs">
-                                    <use xlink:href="img/sprite.svg#icon-thumbs-up"></use>
-                                </svg>
-                        </div>
-                                                
                         <div class="overview__location">
                             <svg class="overview__icon-location">
                                 <use xlink:href="img/sprite.svg#icon-location-pin"></use>
@@ -133,11 +112,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="detail">
-                        <div class="description">
+                    <div class="details ">
+                        <div class="description about hidden">
                             <h3 class="description__header">Katalogi producentów</h3>
-                            <p class="description__text">Zapoznaj się z pełną listą producentów, których oferta znajduje się w zasobach oprogramowania PARTsolutions i pomyśl o tym, aby z naszą pomocą do nich dołączyć ...</p>
-
+                            <div class="description__news">
+                                <p class="description__news-text">Zapoznaj się z pełną listą producentów,    których oferta znajduje się w zasobach oprogramowania PARTsolutions i  pomyśl o tym, aby z naszą pomocą do nich dołączyć ...</p>
+                                <div class="btn-box">
+                                    <button class="btn-inline">
+                                        Tutaj
+                                    </button>
+                                </div>
+                            </div>
+                            
                             <h3 class="description__header">Aktualności</h3>
                             <div class="description__news">
                                 <span class="description__news-data">15 stycznia 2023</span>
@@ -151,10 +137,7 @@
                                 <span class="description__news-data">10 grudnia 2022</span>
                                 <p class="description__news-text">Rozpoczęcie strategicznej współpracy z firmą GM SYSTEM Integracja Systemów Inżynierskich Sp. z o. o. (www.gmsystem.pl) w zakresie wdrażania na rynku inżynierskim następujących rozwiązań CAD/CAM/CAE dla branży mechanicznej ...</p>
                             </div>
-                            <div class="description__news">
-                                <span class="description__news-data">10 grudnia 2022</span>
-                                <p class="description__news-text">Rozpoczęcie strategicznej współpracy z firmą GM SYSTEM Integracja Systemów Inżynierskich Sp. z o. o. (www.gmsystem.pl) w zakresie wdrażania na rynku inżynierskim następujących rozwiązań CAD/CAM/CAE dla branży mechanicznej ...</p>
-                            </div>
+                            
                             <div class="description__arrows">
                                 <svg class="description__arrows-icon">
                                     <use xlink:href="img/sprite.svg#icon-chevron-with-circle-left"></use>
@@ -164,9 +147,147 @@
                                 </svg>
                             </div>
                         </div>
+                        <div class="description offer hidden">
+                            <p class="description__news-text">
+                                Nasza firma jest Certyfikowanym Partnerem Handlowym, Technicznym i Szkoleniowym niemieckiej korporacji CADENAS, posiadającym również uprawnienia do autoryzowanego rozszerzania zasobów oprogramowania CADENAS PARTsolutions.
+                            </p>
+                            <h3 class="description__header">Oferujemy Państwu:</h3>
+                            <ul class="description__ul">
+                                <li class="description__li">
+                                    sprzedaż oprogramowania CADENAS (PARTsolutions, eCATALOG,)
+                                </li>
+                                <li class="description__li">wprowadzanie modeli Państwa wyrobów do zasobów oprogramowania PARTsolutions.
 
-                        <div class="user-reviews">
-                            Reviews
+                                </li>
+                                <li class="description__li">certyfikowane szkolenia z zakresu oprogramowania CADENAS PARTsolutions oraz eCATALOG.
+
+                                </li>
+                            </ul>
+                            <h3 class="description__header">
+                                Korzyści wynikające z wdrożenia oprogramowania PARTsolutions:
+                            </h3>
+                            <ul class="description__ul">
+                                <li class="description__li">
+                                    otrzymanie dostępu do modeli wyrobów (części i zespołów) znajdujących się w ofercie około 600 światowych producentów, jak również opisanych wieloma normami krajowymi i międzynarodowymi,
+                                </li>
+                                <li class="description__li">
+                                    radykalne skrócenie czasu projektowania dzięki wykorzystaniu już zamodelowanych części, wprowadzanych do projektów w formacie dowolnego systemu CAD, obecnego na rynku,
+                                </li>
+                                <li class="description__li">
+                                    elastyczne konfigurowanie postaci konstrukcyjnej szukanych wyrobów,
+                                </li>
+                                <li class="description__li">
+                                    łatwość prowadzenia geometrycznych wyszukiwań żądanych wyrobów, w obrębie kompletnych lub sprecyzowanych zasobów bazy danych PARTsolutions,
+                                </li>
+                                <li class="description__li">
+                                    zakończenie problemów związanych z importem danych CAD 3D/2D, dotyczącym produktów standardowych i znormalizowanych,
+                                </li>
+                                <li class="description__li">
+                                    zażegnanie konieczności własnoręcznego modelowania 3D/2D poszukiwanych wyrobów i części standardowych.
+                                </li>
+                            </ul>
+                        </div>    
+                        <div class="description cadenas hidden">
+                            <p class="description__news-text">
+                                Od 1992, nazwa CADENAS (z hiszpańskiego: połączenie łańcucha) oznacza innowację, sukces i kreatywność w rozwoju oprogramowania. CADENAS jest niezależnym dostawcą oprogramowania, którego rozwiązania są używane przez klientów na całym świecie.
+                            </p>
+                            <h3 class="description__header">Historia firmy CADENAS:</h3>
+                            <ul class="description__ul">
+                                <li class="description__li">
+                                    1992 Tradycyjne biuro konstrukcyjno-projektowe, którego wejście do świata przystępnych komputerów przyspieszyło powstanie zupełnie nowych pomysłów i rozwiązań.
+                                </li>
+                                <li class="description__li">
+                                    1998 Młode i elastyczne przedsiębiorstwo wchodzi na rynek oprogramowania 3D z PARTsolutions.
+                                </li>
+                                <li class="description__li">
+                                    2003 PARTsolutions jest potwierdzonym liderem rynku, uznanym przez rynek jako podstawa przemysłu w Niemczech, otrzymuje liczne nagrody i uznania w przeglądach rynku.
+                                </li>
+                                <li class="description__li">
+                                    2008 Wyłączność. Oferowany jest jednolity ciąg od dostawcy do klienta, zarówno w poziomej i pionowej orientacji rynku.
+                                </li>
+                                <li class="description__li">
+                                    2015 Globalizacja. Światowy rynek w zasięgu widzenia. Produkty są rozprowadzane i rozmieszczone na całym świecie i ustalają nowe standardy i oczekiwania.
+                                </li>
+                                <li class="description__li">
+                                    2019 PARTsolutions rozszerza swój zasięg. Po ustanowieniu ogólnoświatowego standardu dla PARTsolutions, następnym logicznym celem było dalsze zdobywanie istniejących rynków.
+                                </li>
+                                <li class="description__li">
+                                    2021 Dostawcy docierają do milionów użytkowników z technologia PARTsolutions. PARTsolutions umożliwia rozmieszczenie produktów dostawcy różnymi sposobami, wliczając w to własną witrynę internetową dostawcy.
+                                </li>
+                            </ul>
+                            <h3 class="description__header">eCATALOGsolutions - Ogólny zarys:</h3>
+                            <p class="description__news-text">
+                                W dzisiejszych czasach koniecznością jest posiadanie przez producentów elektronicznych katalogów produktów, by dostarczyć je Klientom. 70% komponentów, które muszą być nabyte, jest wyszczególnione wcześniej w procesie projektowania. Dostawcy, którzy nie dostarczają tych informacji, często są zostawiani w tyle, tracąc sprzedaż!
+                            </p>
+                            <p class="description__news-text">
+                                Różnorodne żądania Klientów wymagają utrzymywania zarówno dobrze znanych jak również nowych metod przekazu informacji. eCATALOGsolutions pozwala Ci, w sposób nieograniczony, zarówno na utrzymanie istniejących metod przekazu, jak również na wykorzystanie nowych docelowych platform przekazu - wszystko z jednego źródła danych.
+                            </p>
+                            <ul class="description__ul">
+                                <li class="description__li">
+                                    Czy Twoja firma produkuje komponenty (wyroby standardowe, znormalizowane)?
+                                </li>
+                                <li class="description__li">
+                                    Czy inwestujesz w marketing?
+                                </li>
+                                <li class="description__li">
+                                    Czy chciałbyś zoptymalizować obsługę swych klientów?
+                                </li>
+                                <li class="description__li">
+                                    Czy chciałbyś zdobyć nowych klientów?
+                                </li>
+                            </ul>
+                            <p class="description__news-text">
+                                Jeżeli TAK, to eCATALOGsolutions jest tym, czego potrzebujesz!
+                            </p>
+                            <p class="description__news-text">
+                                Dzięki współpracy z nami sprawiasz, że wszyscy Klienci CADENAS otrzymają łatwy i wydajny dostęp do Twych wyrobów!
+                            </p>
+                            <p class="description__news-text">
+                                CADENAS oferuje znacznie więcej niż tylko nowoczesny i rozbudowany system komputerowy. Najważniejszy jest efekt jego stosowania: doskonałe połączenie pomiędzy dostawcami oraz odbiorcami.
+                            </p>
+                            <h3 class="description__header">PARTsolutions - Zawartość</h3>
+                            <p class="description__news-text">
+                                Biblioteka normaliów PARTsolutions zawiera ogromny zbiór modeli CAD 3D/2D części standardowych, opisanych normami międzynarodowymi i krajowymi (Polskie Normy - PN, ISO, ANSI, BS, CSN / STN, DIN, GOST, JIS, KS, NF, UNI) oraz znajdujących się w ofercie handlowej ponad 850 producentów na całym świecie.
+                            </p>
+                            <p class="description__news-text">
+                                Biblioteka PARTsolutions stanowi zaawansowane uzupełnienie programów CAD 3D i 2D, takich jak CATIA, NX, Pro/ENGINEER, Inventor, Solid Edge, Solid Works, AutoCAD i wielu innych.
+                            </p>
+                        </div>
+                        <div class="description linki">
+                            linki
+                        </div>
+                        <div class="description contact hidden">
+                            Kontakt
+                        </div>   
+
+
+
+                        <div class="additional-info">
+                            <figure class="additional-info__details">
+                                <h3 class="additional-info__header">Partnerzy</h3>
+                                <img class="additional-info__img" src="img/siemens.png" alt="Siemens"> 
+                                
+                            </figure>
+                            <figure class="additional-info__details">
+                                <h3 class="additional-info__header">Współpraca</h3>
+                                
+                                <a href="https://www.pkn.pl/" class="additional-info__link" target="_new">
+                                    <img class="additional-info__img" src="img/pkn.png" alt="PKN Logo"> 
+                                </a>
+                                
+                                
+                            </figure>
+                            <figure class="additional-info__details">
+                                <h3 class="additional-info__header">Warte uwagi</h3>
+                                <a href="https://www.cadenas.de/en/news/siemens-embeds-part-library-3dfindit-com-by-cadenas-into-siemens-capital-software" class="additional-info__link" target="_new">
+                                    <img class="additional-info__img img_big" src="img/news1.jpg" alt="article1">
+                                </a>
+                                <a href="https://www.cadenas.de/en/news/cadenas-powers-3dfindit-com-in-solid-edge-2021-to-speed-design-time" class="additional-info__link" target="_new">
+                                    <img class="additional-info__img img_big" src="img/news2.jpg" alt="article2">
+                                </a>
+                                
+                                
+                            </figure>
                         </div>
                     </div>
                 </main>
@@ -174,3 +295,5 @@
         </div>
     </body>
 </html>
+
+src="assets/images/9/2022-09_Siemens_Capital_3Dfindit_Integration_Teaser-EN-281ce245.jpg"

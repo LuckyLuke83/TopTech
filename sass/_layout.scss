@@ -1,20 +1,5 @@
-p {
-    display: block;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 
-h3 {
-    display: block;
-    font-size: 1rem;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
+
 
 .container {
     max-width: 120rem;
@@ -58,25 +43,33 @@ h3 {
 
 }
 
-.detail {
+.details {
     display: flex;
-    gap: 5rem;
+    gap: var(--flex-gap_medium);
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
-    
+    font-size: 1.3rem;
 }
 
 .description {
     background-color: #fff;
     box-shadow: var(--shadow-light);
-    padding: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    
+    gap: var(--flex-gap_small);
+    align-self: flex-start;
 }
 
-.user-reviews {
-    background-color: #fff;
-    box-shadow: var(--shadow-light);
+.additional-info {
     flex: 0 0 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--flex-gap_medium);
+}
+
+.hidden {
+    display: none;
 }
