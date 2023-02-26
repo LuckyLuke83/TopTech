@@ -17,7 +17,7 @@ Grey dark 3: #999
 */
 :root {
   --color-primary: #109cc4;
-  --color-primary-light: #70c4dc;
+  --color-primary-light: #70c4db;
   --color-primary-dark: #0d7d9d;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
@@ -85,7 +85,7 @@ ul {
 
 .container {
   max-width: 120rem;
-  margin: 8rem auto;
+  margin: 6rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark); }
 
@@ -128,7 +128,7 @@ ul {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: var(--flex-gap_small);
+  gap: 4rem;
   align-self: flex-start; }
 
 .additional-info {
@@ -191,7 +191,8 @@ ul {
     fill: var(--color-grey-dark-3);
     height: 100%;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    transition: all .3s; }
     .user-nav > *:hover {
       background-color: var(--color-grey-light-2); }
   .user-nav__icon-box {
@@ -395,3 +396,77 @@ ul {
 
 .btn-box {
   margin-bottom: 2rem; }
+
+.links__box {
+  display: flex;
+  gap: 2rem;
+  align-items: center; }
+
+.links__icon {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s; }
+  .links__icon:hover {
+    transform: scale(1.1); }
+
+.links__logo {
+  max-width: 100%;
+  max-height: 5rem; }
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap; }
+  .contact-box > * {
+    margin-bottom: 1rem; }
+  .contact-box__company {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .contact-box__key {
+    flex: 0 0 30%; }
+  .contact-box__value {
+    flex: 0 0 70%; }
+
+.contact-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; }
+  .contact-team__header {
+    font-size: 1.5rem;
+    flex: 0 0 100%; }
+  .contact-team__card {
+    position: relative;
+    height: 24rem;
+    flex: 0 0 45%;
+    background-size: cover;
+    background-position: center;
+    transition: all .8s ease; }
+    .contact-team__card-front {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 6rem;
+      width: 100%;
+      padding: 1rem 2rem;
+      background-color: rgba(16, 156, 196, 0.9);
+      color: var(--color-grey-light-1);
+      backface-visibility: hidden; }
+      .contact-team__card-front > p {
+        font-size: 1.2rem; }
+      .contact-team__card-front > h3 {
+        font-size: 1.6rem; }
+    .contact-team__card-back {
+      transform: rotateY(180deg);
+      height: 100%;
+      background-color: var(--color-primary);
+      backface-visibility: hidden; }
+    .contact-team__card:hover {
+      transform: rotateY(-180deg); }
+    .contact-team__card-1 {
+      background-image: url(../img/AB.png); }
+    .contact-team__card-2 {
+      background-image: url(../img/PM.png); }
+    .contact-team__card-3 {
+      background-image: url(../img/MW.png); }

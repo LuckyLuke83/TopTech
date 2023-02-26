@@ -3,7 +3,7 @@
 
 .container {
     max-width: 120rem;
-    margin: 8rem auto;
+    margin: 6rem auto;
     background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
 
@@ -59,7 +59,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: var(--flex-gap_small);
+    gap: 4rem;
     align-self: flex-start;
 }
 
