@@ -504,37 +504,26 @@
 
     &__card {
         position: relative;
+        perspective: 150rem;
+        -moz-perspective: 150rem;
         height: 24rem;
         flex: 0 0 45%;
         background-size: cover;
         background-position: center;
         transition: all .8s ease;
         
-        
 
         &-front {
-            position: absolute;
-            left:0;
-            bottom: 0;
-            height: 6rem;
-            width: 100%;
-            padding: 1rem 2rem;
-            background-color: rgba(16, 156, 196, .9);
-            color: var(--color-grey-light-1);
+            
             backface-visibility: hidden;
 
-            & > p {
-                font-size: 1.2rem;;
-            }
-
-            & > h3 {
-                font-size: 1.6rem;;
-            }
+            
         }
 
         &-back {
             transform: rotateY(180deg);
             height: 100%;
+            width: 100%;
             background-color: var(--color-primary);
             backface-visibility: hidden;
         }
@@ -556,9 +545,28 @@
         }
     }
 
-    
+    &__title {
+        position: absolute;
+        left:0;
+        bottom: 0;
+        height: 6rem;
+        width: 100%;
+        padding: 1rem 2rem;
+        background-color: rgba(16, 156, 196, .9);
+        color: var(--color-grey-light-1);
 
-    // &:hover &__card-back {
-    //     transform: rotateY(0);
-    // }
+        & > p {
+            font-size: 1.2rem;;
+        }
+
+        & > h3 {
+            font-size: 1.4rem;;
+        }
+    }
+      
+}
+
+.card {
+
+    
 }
