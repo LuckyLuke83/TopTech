@@ -446,25 +446,44 @@
             <div class="message__container">
 
                 <div class="message__box">
-                    
-                    
-                    <h3 class="message__header">Wyślij do nas zapytanie!</h3>
+                                        
+                    <h3 class="h3-header">Wyślij do nas zapytanie!</h3>
                     <form class="message__form">
                         <label for="temat">Temat zapytania:</label>
-                        <input type="text" id="temat" name="temat" value="Wypisz temat zapytania">
+                        <input type="text" id="temat" name="temat" class="message__form-input-style" placeholder="Wypisz temat zapytania" required>
                         
                         <label for="email">Twój adres email:</label>
-                        <input type="email" id="temat" name="temat" value="adres@domena">
+                        <input type="email" id="temat" name="temat" class="message__form-input-style" placeholder="adres@domena" required>
                         
-                        <label for="zapytanie">Treść zapytania</label>
-                        <textarea name="message" id="zapytanie" rows="10" cols="50"></textarea>
+                        <label for="zapytanie">Treść zapytania:</label>
+                        <textarea name="message" id="zapytanie" rows="10" cols="50" class="message__form-textarea message__form-input-style" required></textarea>
                         
-                        <input type="submit" class="message__form-submit">
+                        <input type="submit" class="message__form-submit message__form-input-style">
                     </form>
-                    
-                    
+                    <div class="message__box-close">
+                        x
+                    </div>
                     
                 </div>
+            </div>
+        </div>
+        <div class="download">
+            <div class="download__container">
+                <div class="download__icon-box margin-bottom-medium">
+                    <h3 class="h3-header">Materiały do pobrania
+                        
+                    </h3>
+                    <svg class="download__icon-box__icon">
+                        <use xlink:href="img/sprite.svg#icon-install"></use>
+                    </svg>
+                </div>
+                
+                <a href="download/TeamViewerQS.exe" class="download__link">TeamViewerQS</a>
+                <a href="download/NV_Meet_Participant_PL.zip" class="download__link">Meet Participant</a>
+                <a href="download/01_funkcjonalnosc.pdf" class="download__link">Funkcjonalność poszczególnych konfiguracji oprogramowania PARTsolutions.</a>
+            </div>
+            <div class="download__close">
+                x
             </div>
         </div>
     </body>
