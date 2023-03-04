@@ -326,34 +326,86 @@
                                     E-mail
                                 </div>
                                 <div class="contact-box__value">
-                                    info@top-tech.us
+                                    <a href="mailto:info@top-tech.us">info@top-tech.us</a>
+                                    
                                 </div>
                             </div>
                             <div class="contact-team">
-                                <h3 class="contact-team__header">Nasz zespół</h3>
-                                <div class="contact-team__card contact-team__card-1">
-                                    <div class="contact-team__card contact-team__card-front">
-                                        <div class="contact-team__title">
+                                <h2 class="contact-team__header">Nasz zespół:</h2>
+                                <div class="card">
+                                    <div class="card__side card__side-front card-1">
+                                        <div class="card__side-title">
                                             <p>Prezes Zarządu</p>
                                             <h3>Adam Budzyński</h3>
                                         </div>
                                     </div>
-                                    <div class="contact-team__card contact-team__card-back">
-                                        Card back
+                                    <div class="card__side card__side-back">
+                                        <div class="card__side-contact">
+                                            <svg class="card__side-icon">
+                                                <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                            </svg>
+                                            <a href="tel:+48603119937">603 119 937</a>
+                                            
+                                        </div>
+                                        <div class="card__side-contact">
+                                            <svg class="card__side-icon">
+                                                <use xlink:href="img/sprite.svg#icon-mail"></use>
+                                            </svg>
+                                            <a href="mailto:adam.budzynski@top-tech.us">adam.budzynski@top-tech.us</a>
+                                            
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="contact-team__card contact-team__card-2">
-                                    <div class="contact-team__title">
-                                        <p>Koncultant 3D CAD</p>
-                                        <h3>Piotr Menchen</h3>
+                                <div class="card">
+                                    <div class="card__side card__side-front card-2">
+                                        <div class="card__side-title">
+                                            <p>Konsultant 3D CAD</p>
+                                            <h3>Piotr Menchen</h3>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="card__side card__side-back">
+                                        <div class="card__side-contact">
+                                            <svg class="card__side-icon">
+                                                <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                            </svg>
+                                            <a href="tel:+48601701100">601 701 100</a>
+                                            
+                                        </div>
+                                        <div class="card__side-contact">
+                                            <svg class="card__side-icon">
+                                                <use xlink:href="img/sprite.svg#icon-mail"></use>
+                                            </svg>
+                                            <a href="mailto:piotr.menchen@top-tech.us">piotr.menchen@top-tech.us</a>
+                                            
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="contact-team__card contact-team__card-3">
-                                    <div class="contact-team__title">
-                                        <p>Koncultant 3D CAD</p>
-                                        <h3>Maciej Warneński</h3>
+                                <div class="card">
+                                    <div class="card__side card__side-front card-3">
+                                        <div class="card__side-title">
+                                            <p>Konsultant 3D CAD</p>
+                                            <h3>Maciej Warneński</h3>
+                                        </div>
+                                    </div>
+                                    <div class="card__side card__side-back">
+                                        <div class="card__side-contact">
+                                            <svg class="card__side-icon">
+                                                <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                            </svg>
+                                            <a href="tel:+48517539494">517 539 494</a>
+                                            
+                                        </div>
+                                        <div class="card__side-contact">
+                                            <svg class="card__side-icon">
+                                                <use xlink:href="img/sprite.svg#icon-mail"></use>
+                                            </svg>
+                                            <a href="mailto:maciej.warnenski@top-tech.us">maciej.warnenski@top-tech.us</a>
+                                            
+                                        </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>   
 
@@ -388,6 +440,31 @@
                         </div>
                     </div>
                 </main>
+            </div>
+        </div>
+        <div class="message">
+            <div class="message__container">
+
+                <div class="message__box">
+                    
+                    
+                    <h3 class="message__header">Wyślij do nas zapytanie!</h3>
+                    <form class="message__form">
+                        <label for="temat">Temat zapytania:</label>
+                        <input type="text" id="temat" name="temat" value="Wypisz temat zapytania">
+                        
+                        <label for="email">Twój adres email:</label>
+                        <input type="email" id="temat" name="temat" value="adres@domena">
+                        
+                        <label for="zapytanie">Treść zapytania</label>
+                        <textarea name="message" id="zapytanie" rows="10" cols="50"></textarea>
+                        
+                        <input type="submit" class="message__form-submit">
+                    </form>
+                    
+                    
+                    
+                </div>
             </div>
         </div>
     </body>

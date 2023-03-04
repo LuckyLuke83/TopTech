@@ -27,6 +27,7 @@ Grey dark 3: #999
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0,0,0, .3);
+  --shadow-natural: 0 2rem 5rem rgba(0,0,0, .1);
   --shadow-light: 0 2rem 5rem rgba(0,0,0, .06);
   --line: 1px solid var(--color-grey-light-2);
   --flex-gap_small: 1.5rem;
@@ -49,7 +50,8 @@ body {
   color: var(--color-grey-dark-2);
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative; }
 
 p {
   display: block;
@@ -57,6 +59,14 @@ p {
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px; }
+
+h2 {
+  display: block;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold; }
 
 h3 {
   display: block;
@@ -391,6 +401,12 @@ ul {
   display: block;
   margin: 0 auto; }
 
+.additional-info__link {
+  transition: all .3s; }
+  .additional-info__link:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-natural); }
+
 .img_big {
   width: 100%; }
 
@@ -428,49 +444,114 @@ ul {
     flex: 0 0 30%; }
   .contact-box__value {
     flex: 0 0 70%; }
+    .contact-box__value > a {
+      text-decoration: none;
+      color: inherit; }
 
 .contact-team {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem; }
   .contact-team__header {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     flex: 0 0 100%; }
-  .contact-team__card {
-    position: relative;
-    perspective: 150rem;
-    -moz-perspective: 150rem;
-    height: 24rem;
-    flex: 0 0 45%;
+
+.card {
+  position: relative;
+  perspective: 140rem;
+  -moz-perspective: 140rem;
+  height: 24rem;
+  flex: 0 0 47%; }
+  .card-1 {
+    background-image: url(../img/AB.png); }
+  .card-2 {
+    background-image: url(../img/PM.png); }
+  .card-3 {
+    background-image: url(../img/MW.png); }
+  .card__side {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
+    backface-visibility: hidden;
     transition: all .8s ease; }
-    .contact-team__card-front {
-      backface-visibility: hidden; }
-    .contact-team__card-back {
+    .card__side-back {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
       transform: rotateY(180deg);
-      height: 100%;
+      background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary));
+      color: var(--color-grey-light-1); }
+    .card__side-title {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 6rem;
       width: 100%;
-      background-color: var(--color-primary);
-      backface-visibility: hidden; }
-    .contact-team__card:hover {
-      transform: rotateY(-180deg); }
-    .contact-team__card-1 {
-      background-image: url(../img/AB.png); }
-    .contact-team__card-2 {
-      background-image: url(../img/PM.png); }
-    .contact-team__card-3 {
-      background-image: url(../img/MW.png); }
-  .contact-team__title {
+      padding: 1rem 2rem;
+      background-color: rgba(16, 156, 196, 0.9);
+      color: var(--color-grey-light-1); }
+      .card__side-title > p {
+        font-size: 1.2rem; }
+      .card__side-title > h3 {
+        font-size: 1.4rem; }
+    .card__side-contact {
+      display: flex;
+      align-items: center;
+      gap: .5rem; }
+      .card__side-contact > a {
+        text-decoration: none;
+        color: inherit; }
+    .card__side-icon {
+      height: 2rem;
+      width: 2rem;
+      fill: currentColor; }
+  .card:hover .card__side-front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side-back {
+    transform: rotateY(0); }
+
+.message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all .3s; }
+  .message__container {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 6rem;
-    width: 100%;
-    padding: 1rem 2rem;
-    background-color: rgba(16, 156, 196, 0.9);
-    color: var(--color-grey-light-1); }
-    .contact-team__title > p {
-      font-size: 1.2rem; }
-    .contact-team__title > h3 {
-      font-size: 1.4rem; }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70rem;
+    height: 40rem;
+    background-image: linear-gradient(to right bottom, var(--color-grey-light-1), var(--color-grey-light-4));
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .message__box {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem auto; }
+  .message__header {
+    font-size: 1.6rem; }
+  .message__form {
+    display: flex;
+    flex-direction: column; }
+    .message__form-submit {
+      margin-top: 2rem; }
+    .message__form > label {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: inherit; }
+    .message__form > input {
+      font-size: 1.4rem;
+      color: inherit; }
