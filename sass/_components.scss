@@ -332,6 +332,7 @@
 /// DESCRIPTION
 
 .description {
+    display: none;
     
 
     &__header{
@@ -380,8 +381,12 @@
         }
     }
 
-
+    &-active {
+        display: block;
+    }
 }
+
+
 
 ////////////////////////////////////////
 /// additional-info

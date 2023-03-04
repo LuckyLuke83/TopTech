@@ -42,7 +42,7 @@
             <div class="content">
                 <nav class="sidebar">
                     <ul class="side-nav">
-                        <li class="side-nav__item side-nav__item--active">
+                        <li class="side-nav__item side-nav__item--active" data-tab="about">
                             <a href="#" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-home"></use>
@@ -50,7 +50,7 @@
                                 <span>O firmie</span> 
                             </a>
                         </li>
-                        <li class="side-nav__item">
+                        <li class="side-nav__item" data-tab="offer">
                             <a href="#" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-briefcase"></use>
@@ -58,7 +58,7 @@
                                 <span>Oferta</span> 
                             </a>
                         </li>
-                        <li class="side-nav__item">
+                        <li class="side-nav__item" data-tab="cadenas">
                             <a href="#" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-trophy"></use>
@@ -66,7 +66,7 @@
                                 <span>O Cadenas</span> 
                             </a>
                         </li>
-                        <li class="side-nav__item">
+                        <li class="side-nav__item" data-tab="links">
                             <a href="#" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-export"></use>
@@ -74,7 +74,7 @@
                                 <span>Linki</span> 
                             </a>
                         </li>
-                        <li class="side-nav__item">
+                        <li class="side-nav__item" data-tab="contact">
                             <a href="#" class="side-nav__link">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-phone"></use>
@@ -112,8 +112,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="details ">
-                        <div class="description about hidden">
+                    <div class="details">
+                        <div class="description about description-active">
                             <h3 class="description__header">Katalogi producentów</h3>
                             <div class="description__news">
                                 <p class="description__news-text">Zapoznaj się z pełną listą producentów,    których oferta znajduje się w zasobach oprogramowania PARTsolutions i  pomyśl o tym, aby z naszą pomocą do nich dołączyć ...</p>
@@ -147,7 +147,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="description offer hidden">
+                        <div class="description offer">
                             <p class="description__news-text">
                                 Nasza firma jest Certyfikowanym Partnerem Handlowym, Technicznym i Szkoleniowym niemieckiej korporacji CADENAS, posiadającym również uprawnienia do autoryzowanego rozszerzania zasobów oprogramowania CADENAS PARTsolutions.
                             </p>
@@ -187,7 +187,7 @@
                                 </li>
                             </ul>
                         </div>    
-                        <div class="description cadenas hidden">
+                        <div class="description cadenas">
                             <p class="description__news-text">
                                 Od 1992, nazwa CADENAS (z hiszpańskiego: połączenie łańcucha) oznacza innowację, sukces i kreatywność w rozwoju oprogramowania. CADENAS jest niezależnym dostawcą oprogramowania, którego rozwiązania są używane przez klientów na całym świecie.
                             </p>
@@ -253,7 +253,7 @@
                                 Biblioteka PARTsolutions stanowi zaawansowane uzupełnienie programów CAD 3D i 2D, takich jak CATIA, NX, Pro/ENGINEER, Inventor, Solid Edge, Solid Works, AutoCAD i wielu innych.
                             </p>
                         </div>
-                        <div class="description links hidden">
+                        <div class="description links">
                             <div class="links__box">
                                 <a href="https://www.cadenas.de/en" class="links__icon" target="_new">
                                     <img src="img/cadenas-logo.svg" alt="Cadenas logo" class="links__logo">
@@ -486,6 +486,8 @@
                 x
             </div>
         </div>
+
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
 
