@@ -99,6 +99,9 @@ ul {
 .margin-bottom-medium {
   margin-bottom: 2rem; }
 
+.hidden {
+  display: none; }
+
 .container {
   max-width: 120rem;
   margin: 6rem auto;
@@ -523,7 +526,6 @@ ul {
     transform: rotateY(0); }
 
 .message {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
