@@ -100,7 +100,8 @@ ul {
   margin-bottom: 2rem; }
 
 .hidden {
-  display: none; }
+  visibility: hidden;
+  opacity: 0; }
 
 .container {
   max-width: 120rem;
@@ -380,7 +381,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .5rem; }
+    gap: .5rem;
+    padding-top: 1.5rem; }
     .description__arrows-icon {
       height: 2.5rem;
       width: 2.5rem;
@@ -428,6 +430,8 @@ ul {
   display: flex;
   gap: 2rem;
   align-items: center; }
+  .links__box:not(:last-child) {
+    margin-bottom: 2rem; }
 
 .links__icon {
   flex: 0 0 30%;
@@ -533,7 +537,9 @@ ul {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.8);
-  transition: all .3s; }
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s; }
   .message__container {
     position: absolute;
     top: 50%;
@@ -601,17 +607,17 @@ ul {
       margin-bottom: .5rem; }
 
 .download {
-  display: none;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -30rem;
   width: 30rem;
   height: 100vh;
   padding: 5rem 2rem;
   border-left: 2px solid var(--color-grey-light-4);
   background-color: rgba(250, 249, 249, 0.95);
   z-index: 50;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  transition: right .5s; }
   .download__icon-box {
     display: flex;
     justify-content: center;

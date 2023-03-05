@@ -1,5 +1,6 @@
 'use strict'
 
+///////////////////////////////////////
 //nav bar logic
 const navBtns = document.querySelectorAll('.side-nav__item');
 const navContainer = document.querySelector('.side-nav');
@@ -22,18 +23,23 @@ navContainer.addEventListener('click', function(e) {
     .classList.add('description-active');
 });
 
+///////////////////////////////////////
 //message logic
-const meessageWindow = document.querySelector('.message')
+const messageWindow = document.querySelector('.message')
 const btnOpenMessage = document.querySelector('.user-nav__message-btn');
 const btnCloseMessage = document.querySelector('.message__box-close');
 
 const openMessage = function (e) {
     e.preventDefault();
-    meessageWindow.classList.remove('hidden');
+    messageWindow.style.visibility = "visible";
+    messageWindow.style.opacity = "1";
+    // messageWindow.classList.remove('hidden');
 }
 
 const closeMessage = function () {
-    meessageWindow.classList.add('hidden');
+    messageWindow.style.visibility = "hidden";
+    messageWindow.style.opacity = "0";
+    // messageWindow.classList.add('hidden');
 }
 
 
@@ -41,12 +47,12 @@ btnOpenMessage.addEventListener('click', openMessage);
 btnCloseMessage.addEventListener('click', closeMessage);
 
 document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !meessageWindow.classList.contains('hidden')) {
+    if (e.key === 'Escape' && !messageWindow.classList.contains('hidden')) {
         closeMessage();
     }
   });
 
-meessageWindow.addEventListener('click', function(e) {
+messageWindow.addEventListener('click', function(e) {
     
     const clicked = e.target.closest('.message__container');
     if (!clicked) {
@@ -54,3 +60,19 @@ meessageWindow.addEventListener('click', function(e) {
     }
     
 })
+
+///////////////////////////////////////
+//DOWNLOAD
+
+const downloadBtn = document.querySelector('.user-nav__icon-box');
+const downloadPanel = document.querySelector('.download');
+const downloadClose = document.querySelector('.download__close');
+
+downloadBtn.addEventListener('click', function() {
+    downloadPanel.style.right = "0";
+})
+
+downloadClose.addEventListener('click', function() {
+    downloadPanel.style.right = "-30rem";
+})
+
