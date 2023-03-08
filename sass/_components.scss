@@ -230,7 +230,7 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    height: 6rem;
+    height: 5.4rem;
 
     &__title {
         flex: 0 1 20rem;
@@ -238,7 +238,7 @@
         font-weight: 300;
         text-transform: uppercase;
         color: var(--color-grey-light-1);
-        background-color: var(--color-primary);
+        background-color: var(--color-primary-light);
         display:flex;
         align-items: center;
 
@@ -315,6 +315,7 @@
 
     &__header{
         font-size: 1.5rem;
+        margin: 1rem 0;
     }
 
     &__text{
@@ -352,6 +353,10 @@
         }
     }
 
+    &__ul {
+        margin: 1rem;
+    }
+
     &-active {
         display: block;
     }
@@ -387,31 +392,20 @@
     &__img {
         display: block;
         margin: 0 auto;
-        filter: blur(1px);
-        transition: filter .3s;
-
-        &:hover {
-            filter: none;
-        }
-        
     }
-
-    &__link {
-        transition: all .3s;
-
-        &:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-natural);
-        }
-
-
-    }
-
 
 }
 
 .img_big{
     width: 100%;
+    filter: blur(1px);
+    transition: all .3s;
+
+    &:hover {
+        filter: none;
+        transform: scale(1.05);
+        box-shadow: var(--shadow-natural);
+    }
 }
 
 .btn-box {
@@ -430,7 +424,7 @@
         
 
         &:not(:last-child) {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
     }
 
@@ -671,8 +665,6 @@
         }
 
         &-textarea {
-            
-            
             resize: none;
         }
         
