@@ -1,5 +1,38 @@
 'use strict'
 
+import {news} from './news.js'
+
+const newsPages = Math.ceil((news.length)/4);
+const newsSection = document.querySelector('.about');
+const arrows = document.querySelector('.description__arrows');
+
+///////////////////////////////////////
+//news 
+
+let newsPageNumber = 1;
+
+const newsLoad = function(pageNumber) {
+    newsSection.innerHTML = '';
+    const lastNewsNumber = newsPageNumber*4-1; 
+    const newsOnPage = news.slice(newsPageNumber-1, newsPageNumber*4);
+    
+    const newsForPage = newsOnPage.map(n => `<div class="description__news">
+    <span class="description__news-data">${n.date}</span>
+    <p class="description__news-text">${n.content}</p>
+</div>`);
+console.log(newsForPage);
+    const markup = '<h3 class="description__header">Aktualności</h3>';
+    newsSection.insertAdjacentHTML('afterbegin', markup);
+}
+
+arrows.addEventListener('click', function(e) {
+    const clicked = e.target.closest('.description__arrows-icon');
+    
+})
+
+newsLoad(1);
+
+
 ///////////////////////////////////////
 //nav bar logic
 const navBtns = document.querySelectorAll('.side-nav__item');
