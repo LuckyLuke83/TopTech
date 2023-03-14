@@ -38,8 +38,16 @@ export const news = [
         content: 'Wystąpienie podczas VII FORUM Stowarzyszenia „ProCAx”.',
     },
     {
+        date: '16 październik 2021',
+        content: 'Wystawiennictwo podczas Międzynarodowych Targów Przetwórstwa Tworzyw Sztucznych i Obróbki Metali POLTOOLS 2008 w Bydgoszczy.',
+    },
+    {
         date: '27 września 2021',
         content: 'Uruchomienie strony z informacją o naszej ofercie na rozwiązania CADENAS.',
+    },
+    {
+        date: '12 czerwca 2021',
+        content: 'wystawiennictwo podczas 12. Międzynarodowych Targów Technologii i Produkcji PROTECH 2021.',
     }
 ]
 

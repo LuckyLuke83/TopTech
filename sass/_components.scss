@@ -310,15 +310,13 @@
 /// DESCRIPTION
 
 .description {
+    position: relative;
     display: none;
-    
+   
 
     &__header{
         font-size: 1.5rem;
         margin: 1rem 0;
-    }
-
-    &__text{
     }
 
     &__news{
@@ -333,11 +331,17 @@
     }
         
     &__arrows {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        translate: -50%;
+        align-self: flex-end;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: .5rem;
         padding-top: 1.5rem;
+
 
         &-icon {
             height: 2.5rem;
@@ -360,9 +364,12 @@
     &-active {
         display: block;
     }
+};
+
+.about {
+    align-self: stretch;
+    
 }
-
-
 
 ////////////////////////////////////////
 /// additional-info
@@ -398,7 +405,7 @@
 
 .img_big{
     width: 100%;
-    filter: blur(1px);
+    filter: grayscale(1);
     transition: all .3s;
 
     &:hover {

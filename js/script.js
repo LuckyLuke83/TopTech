@@ -1,10 +1,9 @@
 'use strict'
 
 import {news} from './news.js'
-
-const newsPages = Math.ceil((news.length)/4);
+const newsPerPage = 5;
+const newsPages = Math.ceil((news.length)/newsPerPage);
 const newsSection = document.querySelector('.about');
-const arrows = document.querySelector('.description__arrows');
 
 ///////////////////////////////////////
 //news 
@@ -13,24 +12,38 @@ let newsPageNumber = 1;
 
 const newsLoad = function(pageNumber) {
     newsSection.innerHTML = '';
-    const lastNewsNumber = newsPageNumber*4-1; 
-    const newsOnPage = news.slice(newsPageNumber-1, newsPageNumber*4);
+     
+    const newsOnPage = news.slice((newsPageNumber-1)*newsPerPage, newsPageNumber*newsPerPage);
     
     const newsForPage = newsOnPage.map(n => `<div class="description__news">
     <span class="description__news-data">${n.date}</span>
     <p class="description__news-text">${n.content}</p>
-</div>`);
-console.log(newsForPage);
-    const markup = '<h3 class="description__header">Aktualności</h3>';
+    </div>`).join('');
+
+    const markup = `<h3 class="description__header">Aktualności</h3>
+    ${newsForPage}
+    <div class="description__arrows">
+        <svg class="description__arrows-icon minus ${newsPageNumber === 1 ? 'hidden-btn' : ''}">
+            <use xlink:href="img/sprite.svg#icon-chevron-with-circle-left"></use>
+        </svg>
+        <svg class="description__arrows-icon plus ${newsPageNumber === newsPages ? 'hidden-btn' : ''}">
+            <use xlink:href="img/sprite.svg#icon-chevron-with-circle-right"></use>
+        </svg>
+    </div>`;
     newsSection.insertAdjacentHTML('afterbegin', markup);
-}
 
-arrows.addEventListener('click', function(e) {
-    const clicked = e.target.closest('.description__arrows-icon');
-    
-})
+    const newsControl = document.querySelector('.description__arrows');
+    newsControl.addEventListener('click', function(e) {
+        const clicked = e.target.closest('.description__arrows-icon');
+        
+        clicked.classList.contains('plus') ? newsPageNumber++ : newsPageNumber--;
+        
+        newsLoad(newsPageNumber);
+    });
 
-newsLoad(1);
+};
+
+
 
 
 ///////////////////////////////////////
@@ -43,8 +56,6 @@ const sideContent = document.querySelectorAll('.description');
 navContainer.addEventListener('click', function(e) {
     const clicked = e.target.closest('.side-nav__item');
     if (!clicked) return;
-
-    console.log(clicked);
 
     navBtns.forEach(li => li.classList.remove('side-nav__item--active'));
     sideContent.forEach(c => c.classList.remove('description-active'));
@@ -109,3 +120,4 @@ downloadClose.addEventListener('click', function() {
     downloadPanel.style.right = "-30rem";
 })
 
+newsLoad(1);
