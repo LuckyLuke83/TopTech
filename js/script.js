@@ -58,13 +58,13 @@ navContainer.addEventListener('click', function(e) {
     if (!clicked) return;
 
     navBtns.forEach(li => li.classList.remove('side-nav__item--active'));
-    sideContent.forEach(c => c.classList.remove('description-active'));
+    sideContent.forEach(c => c.classList.add('hidden'));
 
     clicked.classList.add('side-nav__item--active');
 
     document
     .querySelector(`.${clicked.dataset.tab}`)
-    .classList.add('description-active');
+    .classList.remove('hidden');
 });
 
 ///////////////////////////////////////

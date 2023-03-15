@@ -152,7 +152,7 @@ ul {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 4rem;
+  gap: 1rem;
   align-self: flex-start; }
 
 .additional-info {
@@ -357,13 +357,11 @@ ul {
     box-shadow: none; } }
 
 .description {
-  position: relative;
-  display: none; }
+  position: relative; }
   .description__header {
-    font-size: 1.5rem;
-    margin: 1rem 0; }
+    font-size: 1.5rem; }
   .description__news {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem; }
