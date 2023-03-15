@@ -52,18 +52,7 @@
     font-size: 1.3rem;
 }
 
-// .section {
-//     background-color: #fff;
-//     box-shadow: var(--shadow-light);
-//     padding: 2rem;
-//     display: flex;
-//     flex-direction: column;
-//     flex: 1;
-//     gap: 4rem;
-//     align-self: flex-start;
-// }
-
-.description {
+.section {
     background-color: #fff;
     box-shadow: var(--shadow-light);
     padding: 2rem;
@@ -72,7 +61,30 @@
     flex: 1;
     gap: 1rem;
     align-self: flex-start;
+
+    &__header{
+        font-size: 1.5rem;
+    }
+
+    &__ul {
+        margin: 1rem;
+    }
+
+    &__news-text {
+
+    }
 }
+
+// .description {
+//     background-color: #fff;
+//     box-shadow: var(--shadow-light);
+//     padding: 2rem;
+//     display: flex;
+//     flex-direction: column;
+//     flex: 1;
+//     gap: 1rem;
+//     align-self: flex-start;
+// }
 
 .additional-info {
     flex: 0 0 30rem;

@@ -309,16 +309,9 @@
 ////////////////////////////////////////
 /// DESCRIPTION
 
-.description {
+.about {
     position: relative;
     
-   
-
-    &__header{
-        font-size: 1.5rem;
-        // margin: 1rem 0;
-    }
-
     &__news{
         padding-top: 1rem;
         display: flex;
@@ -357,13 +350,8 @@
         }
     }
 
-    &__ul {
-        margin: 1rem;
-    }
+   
 
-    &-active {
-        display: block;
-    }
 };
 
 .about {
