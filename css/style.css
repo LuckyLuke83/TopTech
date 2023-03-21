@@ -1,4 +1,23 @@
 /*
+0 - 600px:      Phone
+600 - 700px     Tablet portrait small
+700 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port-small
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/*
 COLORS
 
 Primary: #109cc4
@@ -42,6 +61,21 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 44em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (max-width: 35em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -112,6 +146,9 @@ ul {
   margin: 6rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark); }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0 auto; } }
 
 .header {
   font-size: 1.4rem;
@@ -132,6 +169,12 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   text-align: center; }
+  @media only screen and (max-width: 44em) {
+    .sidebar {
+      flex: 0 0 28%; } }
+  @media only screen and (max-width: 35em) {
+    .sidebar {
+      flex: 0 0 5%; } }
 
 .hotel-view {
   background-color: #fff;
@@ -144,6 +187,14 @@ ul {
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
   font-size: 1.3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .details {
+      flex-direction: column;
+      padding: 8rem;
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 44em) {
+    .details {
+      padding: 4rem; } }
 
 .section {
   background-color: #fff;
@@ -159,10 +210,26 @@ ul {
     margin: 1rem; }
 
 .additional-info {
-  flex: 0 0 30rem;
   display: flex;
   flex-direction: column;
+  flex: 0 0 30rem;
   gap: var(--flex-gap_medium); }
+  @media only screen and (max-width: 56.25em) {
+    .additional-info {
+      flex-direction: row; } }
+  @media only screen and (max-width: 35em) {
+    .additional-info {
+      flex-direction: column; } }
+  @media only screen and (max-width: 56.25em) {
+    .additional-info__details {
+      width: 50%;
+      flex-direction: row; } }
+  @media only screen and (max-width: 35em) {
+    .additional-info__details {
+      width: 100%; } }
+  @media only screen and (max-width: 56.25em) {
+    .additional-info__details-1 {
+      align-self: flex-start; } }
 
 .hidden {
   display: none; }
@@ -259,6 +326,10 @@ ul {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+    @media only screen and (max-width: 35em) {
+      .side-nav__item {
+        flex: 0 0 28%;
+        padding: 1.5rem 1.5rem; } }
   .side-nav__item::before {
     content: "";
     position: absolute;
@@ -270,6 +341,9 @@ ul {
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
     background-color: .1s;
     transform: scaleY(0); }
+  @media only screen and (max-width: 35em) {
+    .side-nav__text {
+      display: none; } }
   .side-nav__item:hover::before, .side-nav__item--active {
     background-color: var(--color-primary);
     transform: scaleY(1);
@@ -291,12 +365,18 @@ ul {
     width: 2rem;
     fill: currentColor;
     margin-right: 2rem; }
+    @media only screen and (max-width: 35em) {
+      .side-nav__icon {
+        margin-right: 0; } }
 
 .legal {
   color: var(--color-grey-light-4);
   font-size: 1.2rem;
   padding: 3rem 3rem;
   text-align: center; }
+  @media only screen and (max-width: 35em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -316,7 +396,7 @@ ul {
   gap: 1rem;
   height: 5.4rem; }
   .overview__title {
-    width: 20%;
+    width: auto;
     font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -326,10 +406,14 @@ ul {
     align-items: center; }
   .overview__partner {
     width: 25%;
+    height: 100%;
     flex: 2 1 20%;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    align-items: center; }
     .overview__partner-logo {
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       filter: grayscale(1); }
   .overview > * {
     padding: .5rem 1rem; }
@@ -362,7 +446,14 @@ ul {
     box-shadow: none; } }
 
 .about {
-  position: relative; }
+  position: relative;
+  min-height: 65rem; }
+  @media only screen and (max-width: 56.25em) {
+    .about {
+      min-height: 70rem; } }
+  @media only screen and (max-width: 44em) {
+    .about {
+      min-height: 85rem; } }
   .about__news {
     padding-top: 1rem;
     display: flex;
@@ -410,6 +501,7 @@ ul {
   margin-left: -3rem; }
 
 .additional-info__img {
+  width: 100%;
   display: block;
   margin: 0 auto; }
 
@@ -423,25 +515,25 @@ ul {
 .btn-box {
   margin-bottom: 2rem; }
 
-.links__box {
-  display: flex;
-  gap: 2rem;
-  align-items: center; }
-  .links__box:not(:last-child) {
-    margin-bottom: 3rem; }
-
-.links__icon {
-  flex: 0 0 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .3s; }
-  .links__icon:hover {
-    transform: scale(1.1); }
-
-.links__logo {
-  max-width: 100%;
-  max-height: 5rem; }
+.links {
+  align-self: flex-start; }
+  .links__box {
+    display: flex;
+    gap: 2rem;
+    align-items: center; }
+    .links__box:not(:last-child) {
+      margin-bottom: 3rem; }
+  .links__icon {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s; }
+    .links__icon:hover {
+      transform: scale(1.1); }
+  .links__logo {
+    max-width: 100%;
+    max-height: 5rem; }
 
 .contact-box {
   display: flex;

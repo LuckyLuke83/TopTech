@@ -140,6 +140,11 @@
         &:not(:last-child) {
             margin-bottom: .5rem;
         }
+
+        @include respond(phone) {
+            flex: 0 0 28%;
+            padding: 1.5rem 1.5rem;  
+        }
     }
 
     &__item::before {
@@ -155,6 +160,14 @@
                     background-color: .1s;
         transform: scaleY(0);
 
+    }
+
+    &__text {
+
+        @include respond(phone) { // width < 900?
+            display: none;
+        }
+        
     }
     
     &__item:hover::before,
@@ -188,6 +201,10 @@
         width: 2rem;
         fill: currentColor;
         margin-right: 2rem;
+
+        @include respond(phone) {
+            margin-right: 0;  
+        }
     }
 }
 
@@ -197,6 +214,10 @@
     font-size: 1.2rem;
     padding: 3rem 3rem;
     text-align: center;
+
+    @include respond(phone) {
+        display: none;
+    }
 }
 
 
@@ -233,7 +254,7 @@
     height: 5.4rem;
 
     &__title {
-        width: 20%;
+        width: auto;
         font-size: 1.5rem;
         font-weight: 300;
         text-transform: uppercase;
@@ -246,11 +267,15 @@
 
     &__partner {
         width: 25%;
+        height: 100%;
         flex: 2 1 20%;
         text-align: center;
+        display: flex;
+        align-items: center;
         
         &-logo {
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
             filter: grayscale(1);
             
         }
@@ -314,8 +339,18 @@
 
 .about {
     position: relative;
-    
+    min-height: 65rem;
+
+    @include respond(tab-port) { // width < 900?
+        min-height: 70rem;
+    }
+
+    @include respond(tab-port-small) {
+        min-height: 85rem;    
+    }
+
     &__news{
+        
         padding-top: 1rem;
         display: flex;
         flex-direction: column;
@@ -388,6 +423,7 @@
 
     
     &__img {
+        width: 100%;
         display: block;
         margin: 0 auto;
     }
@@ -414,6 +450,8 @@
 /// LINKS   
 
 .links {
+
+    align-self: flex-start;
 
     &__box {
         display: flex;

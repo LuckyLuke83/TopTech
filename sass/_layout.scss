@@ -1,13 +1,13 @@
 
-
-
 .container {
     max-width: 120rem;
     margin: 6rem auto;
     background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
 
-    
+    @include respond(tab-land) {
+        margin: 0 auto;
+    }
 }
 
 .header {
@@ -33,6 +33,14 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+
+    @include respond(tab-port-small) {
+        flex: 0 0 28%;   
+    }
+
+    @include respond(phone) {
+        flex: 0 0 5%;   
+    }
 }
 
 
@@ -50,6 +58,17 @@
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
     font-size: 1.3rem;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        padding: 8rem;
+        font-size: 1.5rem;
+    }
+
+    @include respond(tab-port-small) {
+        padding: 4rem;    
+    }
+
 }
 
 .section {
@@ -73,11 +92,52 @@
 }
 
 .additional-info {
-    flex: 0 0 30rem;
+    
     display: flex;
     flex-direction: column;
+    flex: 0 0 30rem;
     gap: var(--flex-gap_medium);
+
+    @include respond(tab-land) {
+        // flex: 0 1 auto;
+    }
+
+    @include respond(tab-port) { // width < 900?
+        flex-direction: row;
+        // flex: 1 1 50%;
+    }
+
+    @include respond(phone) { // width < 900?
+        flex-direction: column;
+        // flex: 1 1 50%;
+    }
+
+    &__details {
+        
+
+        @include respond(tab-port) { // width < 900?
+            width: 50%;
+            flex-direction: row;
+            
+        }
+
+        @include respond(phone) { // width < 900?
+            width: 100%;
+        }
+
+        
+
+        &-1 {
+            
+            @include respond(tab-port) { // width < 900?
+                align-self: flex-start;
+            }
+            
+        }
+    }
+
 }
+
 
 .hidden {
     display: none;
