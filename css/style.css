@@ -69,10 +69,10 @@ html {
       font-size: 50%; } }
   @media only screen and (max-width: 44em) {
     html {
-      font-size: 45%; } }
-  @media only screen and (max-width: 35em) {
+      font-size: 50%; } }
+  @media only screen and (max-width: 30em) {
     html {
-      font-size: 45%; } }
+      font-size: 50%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -172,7 +172,7 @@ ul {
   @media only screen and (max-width: 44em) {
     .sidebar {
       flex: 0 0 28%; } }
-  @media only screen and (max-width: 35em) {
+  @media only screen and (max-width: 30em) {
     .sidebar {
       flex: 0 0 5%; } }
 
@@ -217,14 +217,14 @@ ul {
   @media only screen and (max-width: 56.25em) {
     .additional-info {
       flex-direction: row; } }
-  @media only screen and (max-width: 35em) {
+  @media only screen and (max-width: 30em) {
     .additional-info {
       flex-direction: column; } }
   @media only screen and (max-width: 56.25em) {
     .additional-info__details {
       width: 50%;
       flex-direction: row; } }
-  @media only screen and (max-width: 35em) {
+  @media only screen and (max-width: 30em) {
     .additional-info__details {
       width: 100%; } }
   @media only screen and (max-width: 56.25em) {
@@ -326,7 +326,7 @@ ul {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
-    @media only screen and (max-width: 35em) {
+    @media only screen and (max-width: 30em) {
       .side-nav__item {
         flex: 0 0 28%;
         padding: 1.5rem 1.5rem; } }
@@ -341,7 +341,7 @@ ul {
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
     background-color: .1s;
     transform: scaleY(0); }
-  @media only screen and (max-width: 35em) {
+  @media only screen and (max-width: 30em) {
     .side-nav__text {
       display: none; } }
   .side-nav__item:hover::before, .side-nav__item--active {
@@ -365,7 +365,7 @@ ul {
     width: 2rem;
     fill: currentColor;
     margin-right: 2rem; }
-    @media only screen and (max-width: 35em) {
+    @media only screen and (max-width: 30em) {
       .side-nav__icon {
         margin-right: 0; } }
 
@@ -374,7 +374,7 @@ ul {
   font-size: 1.2rem;
   padding: 3rem 3rem;
   text-align: center; }
-  @media only screen and (max-width: 35em) {
+  @media only screen and (max-width: 30em) {
     .legal {
       display: none; } }
 
@@ -397,7 +397,7 @@ ul {
   height: 5.4rem; }
   .overview__title {
     width: auto;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 300;
     text-transform: uppercase;
     color: var(--color-grey-light-1);
@@ -566,10 +566,10 @@ ul {
   -moz-perspective: 140rem;
   height: 24rem;
   flex: 0 0 47%; }
-  @media only screen and (max-width: 35em) {
+  @media only screen and (max-width: 30em) {
     .card {
       flex: 0 0 100%;
-      height: 48rem; } }
+      height: 30rem; } }
   .card-1 {
     background-image: url(../img/AB.png); }
   .card-2 {
@@ -638,13 +638,17 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70rem;
     padding: 3rem 0;
     background-image: linear-gradient(to right bottom, var(--color-grey-light-1), var(--color-grey-light-4));
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 44em) {
+      .message__container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px; } }
   .message__box {
     position: relative;
     width: 80%;
