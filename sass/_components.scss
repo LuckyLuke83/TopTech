@@ -423,9 +423,11 @@
 
     
     &__img {
-        width: 100%;
+        width: 50%;
         display: block;
         margin: 0 auto;
+
+        
     }
 
 }
@@ -522,6 +524,10 @@
     flex-wrap: wrap;
     gap: 2rem;
 
+    // @include respond(phone) { // width < 900?
+    //     flex-direction: column;
+    // }
+
     &__header {
         font-size: 1.6rem;
         flex: 0 0 100%;
@@ -536,6 +542,11 @@
     -moz-perspective: 140rem;
     height: 24rem;
     flex: 0 0 47%;
+
+    @include respond(phone) { // width < 900?
+        flex: 0 0 100%;
+        height: 48rem;
+    }
 
     &-1 {
         background-image: url(../img/AB.png);
